@@ -1,0 +1,109 @@
+// start contact
+.contact{
+  padding-top: 200px;
+  padding-bottom: 225px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__side{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    max-width: 620px;
+  }
+  &__logo-img{
+    width: 100%;
+  }
+  &__title{
+    max-width: 620px;
+  }
+  &__form{
+    position: relative;
+    margin-right: 205px;
+    &::before{
+      position: absolute;
+      top: -443px;
+      left: -503px;
+      content: url(/images/content/contact-bg.png);
+      object-fit: initial;
+      display: block;
+      z-index: -1;
+    }
+  }
+}
+// end contact
+
+
+@media (max-width:1430px) {
+  .contact{
+    &__logo-img{
+      max-width: 480px;
+    }
+    &__side{
+      max-width: 480px;
+    }
+    &__form{
+      margin-right: 195px;
+      &::before{
+        transform: scale(.9);
+        left:-580px;
+      }
+    }
+  }
+}
+@media (max-width:1230px){
+  .contact{
+    &__form{
+      margin-right:150px;
+      &::before{
+        transform: scale(.8);
+        left:-535px;
+      }
+    }
+  }
+}
+@media (max-width:1080px) {
+  .contact{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &__inner{
+      flex-direction: column;
+      gap:25px;
+    }
+    &__form{
+      margin-right: 0;
+      &::before{
+        position: absolute;
+        display: block;
+        content: '';
+        border-radius: 50%;
+        width: 500px;
+        height: 500px;
+        left:unset;
+        top:-50px;
+        right:-10px;
+        filter: blur(200px);
+        background:$blue;
+      }
+    }
+    &__logo{
+      order: 1;
+    }
+  }
+}
+@media (max-width:800px) {
+  .contact{
+    &__side{
+      max-width: 380px;
+    }
+  }
+}
+@media (max-width:400px) {
+  .contact{
+    &__logo-img{
+      max-width: 95vw;
+    }
+  }
+}

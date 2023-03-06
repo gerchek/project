@@ -1,0 +1,215 @@
+@import 'vars';
+@import 'reset';
+@import 'global';
+@import 'fonts';
+@import 'libs';
+
+@import './header/header.scss';
+@import './banner_alt/banner_alt.scss';
+@import './modal/modal.scss';
+.sidemenu{
+  display: flex;
+  flex-direction: column;
+  border-radius:50px;
+  background: url(/images/content/services-side-bg.png);
+  background-size: cover;
+  font-weight: 600;
+  font-size: 18px;
+  &__item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding:50px 40px 40px;
+    &:not(:last-child){
+      border-bottom: 1px solid #fff;
+    }
+  }   
+}
+// .mCSB_container{
+//   overflow: visible;
+// }
+.contact{
+  background: url(/images/content/services-contact-bg.png);
+  background-size: 100% 100%;
+  padding: 60px 52px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50px;
+  align-items: center;
+  &__title{
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 700;
+  }
+  &__desc{
+    margin-bottom: 41px;
+    text-align: center;
+  }
+}
+.services{
+  padding-top: 120px;
+  padding-bottom: 200px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap:15px;
+  }
+  &__sidebar{
+    display: flex;
+    flex-direction: column;
+    // position: sticky;
+    // top:120px;
+    gap:20px;
+    width: 100%;
+    align-self: flex-start;
+    max-width: 415px;
+    color:#fff;
+  }
+  &__items{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1254px;
+  }
+  &__item{
+    border-radius: 50px;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+  }
+  &__img{
+    border-radius: 50px;
+    height: 330px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 50px;
+  }
+  &__title{
+    padding-left: 40px;
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  &__desc{
+    margin-bottom: 50px;
+  }
+}
+.price-list{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  background: transparent;
+  &__item{
+    display: flex;
+    background: #fff;
+    border-radius: 20px;
+  }
+  &__title{
+    padding:36px 30px 34px;
+    margin-right: auto;
+  }
+  &__time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid #f3f3f3;
+    width: 150px;
+  }
+  &__price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    border-left: 2px solid #f3f3f3;
+  }
+}
+@media (max-width:1200px) {
+  .services__sidebar{
+    max-width: 300px;
+    &__item{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding:50px 10px 40px 40px;
+    }
+  }
+}
+@media (max-width:1000px) {
+  .services{
+    &__menu{
+      display: none;
+    }
+    &__inner{
+      flex-direction: column-reverse;
+    }
+    &__sidebar{
+      max-width: 415px;
+      align-self: center;
+    }
+  }
+}
+@media (max-width:800px) {
+  .accordion-header{
+    font-size: 24px !important;
+  }
+  .services{
+    padding-top: 40px;
+    padding-bottom: 100px;
+    .container{
+      padding: 0;
+    }
+    &__item{
+      border-radius: 20px;
+      padding: 20px 20px 20px 16px;
+    }
+    &__sidebar{
+      width: 100%;
+      padding: 0 15px;
+    }
+  }
+  .contact{
+    padding:49px 42px 40px;
+    border-radius: 20px;
+  }
+}
+@media (max-width:550px) {
+  .services{
+    &__img{
+      height: 156px;
+      border-radius: 20px;
+    }
+  }
+}
+@media (max-width:450px) {
+  .services{
+    &__img{
+      margin-bottom: 20px;
+    }
+    &__title{
+      margin-bottom: 15px;
+    }
+    &__desc{
+      margin-bottom: 35px;
+    }
+  }
+  .price-list{
+    gap:15px;
+    &__item{
+      flex-direction: column;
+    }
+    &__title,&__time,&__price{
+      padding:25px 17px 25px 25px;
+      justify-content: flex-start;
+    }
+    &__time,&__price{
+      border-left: none;
+      border-top: 2px solid #f3f3f3;
+    }
+  }
+}
+@import './footer/footer.scss';
+@import './special.scss';
+@import 'media';

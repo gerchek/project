@@ -1,0 +1,7 @@
+*
+!custom_admin.js
+!tinymce5
+!.gitignore
+!/admin/
+!/admin/**/
+!/**/mass-deletion.js

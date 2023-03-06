@@ -1,0 +1,253 @@
+@import 'vars';
+@import 'reset';
+@import 'global';
+@import 'fonts';
+@import 'libs';
+
+@import './header/header.scss';
+@import './banner_alt/banner_alt.scss';
+@import './modal/modal.scss';
+.slick-list{
+  margin: 0 -10px;
+}
+.slick-slide>div{
+  padding: 0 10px;
+}
+.graduates{
+  margin-top: 120px;
+  .head__img>svg{
+    height:67px;
+    width: auto;
+  }
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  &__head{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 75px;
+  }
+  &__item{
+    display: flex !important;
+    flex-direction: column;
+    gap:35px;
+    max-width: 415px;
+  }
+  &__img{
+    border-radius: 20px;
+    border:1px solid $text;
+    max-height: 545px;
+    max-width: 415px;
+  }
+  &__arrows{
+    display: flex;
+    position: absolute;
+    top:30px;
+    right:0;
+    align-items: flex-end;
+    gap:40px;
+    font-size: 0;
+  }
+  &__slider{
+    display: flex;
+    gap:20px;
+    justify-content: center;
+    &>.graduates__arrows{
+      display: none;
+      gap: 50px;
+      position: absolute;
+      bottom: -40px;
+    }
+  }
+}
+.reviews{
+  padding-top:120px;
+  &__inner{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+  }
+  &__slider{
+    display: flex;
+    gap:20px;
+  }
+  &__item-head{
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .head__img>svg{
+    height: 72px;
+    width: auto;
+  }
+  &__linkImg{
+    position: absolute;
+    right:60px;
+    top:65px;
+  }
+  &__item{
+    padding:60px 55px 60px 55px;
+    background: #f3f3f3;
+    height:100%;
+    border-radius: 50px;
+    cursor: $pointer;
+    gap:25px;
+    position: relative;
+    z-index: 0;
+    min-height: 267px;
+    &::before{
+      position: absolute;
+      left:0;
+      top:0;
+      width: 100%;
+      height: 100%;
+      background-image: url(/images/content/reviews-bg.png);
+      content:'';
+      z-index: -1;
+      background-size: 100% 100%;
+      border-radius: inherit;
+      opacity: 0;
+      transition: .3s all ease-in;
+    }
+    &:hover::before{
+      opacity: 1;
+    }
+  }
+  &__arrows{
+    display: flex;
+    position: absolute;
+    top:30px;
+    right:0;
+    align-items: flex-end;
+    gap:40px;
+    font-size: 0;
+  }
+  &__title{
+    text-transform: uppercase;
+  }
+  &__desc{
+    z-index: 1;
+  }
+  &__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  &__arrow{
+    width: auto;
+    height:41px;
+  }
+}
+#review-info{
+  overflow: hidden;
+  padding-bottom: 100px;
+  .form__head{
+    margin-bottom: 0;
+  }
+  .review{
+    height: 100%;
+  }
+  .review__title{
+    margin-bottom: 20px;
+    padding-left: 40px;
+  }
+  .review__item{
+    display: flex !important;
+    flex-direction: column;
+
+  }
+  .review__collapsible{
+    padding-left: 40px;
+    overflow-y: auto;
+    max-height: calc(100vh - 340px);
+    &::-webkit-scrollbar-thumb{
+      background-color: black;
+      border-radius: 100px;
+      background-clip: padding-box;
+    }
+    &::-webkit-scrollbar{
+      background-color: #fff;
+      width: 10px;
+    }
+  }
+  .review__desc{
+    max-width: 580px;
+  }
+  .review__arrows{
+    margin-top: 60px;
+    display: flex;
+    position: relative;
+    top:30px;
+    right:0;
+    align-items: flex-end;
+    gap:40px;
+    font-size: 0;
+  }
+}
+@import './contact-form/contact-form.scss';
+@import './footer/footer.scss';
+@import './special.scss';
+@import 'media';
+
+@media (max-width:800px) {
+  .banner{
+    .head__img{
+      display: none;
+    }
+  }
+  .graduates{
+    margin-top: 80px;
+    &__head{
+      position: unset;
+      margin-bottom: 30px;
+      &>.graduate__arrows{
+        display: none;
+      }
+    }
+    &__slider{
+      position: relative;
+      &>.graduate__arrows{
+        display: flex;
+      }
+    }
+    &__arrows{
+      top:unset;
+      bottom: -45px;
+      right:unset;
+      align-self: center;
+    }
+    &__text{
+      display: none;
+    }
+  }
+  .reviews{
+    margin-bottom: 100px;
+    &__item{
+      padding: 35px 25px;
+      border-radius: 20px;
+    }
+    &__item-head{
+      margin-bottom: 15px;
+    }
+    &__arrows{
+      top:unset;
+      bottom: -45px;
+      right:unset;
+      align-self: center;
+    }
+    &__linkImg{
+      width: 36px;
+      height: 20.5px;
+      top:unset;
+      bottom:65px;
+      &>.arrow__circle{
+        width: 71px;
+        height: 71px;
+      }
+    }
+  }
+}

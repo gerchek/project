@@ -1,0 +1,125 @@
+// start banner
+.banner{
+  position: relative;
+  max-width: 1920px;
+  margin:0 auto;
+  padding-top:123px;
+  padding-bottom: 60px;
+  &__breadcrumbs{
+    margin-bottom: 25px;
+    font-size: 14px;
+  }
+  .head__img>svg{
+    height:72px;
+    width: auto;
+  }
+  &::before{
+    position: absolute;
+    top:-181px;
+    bottom: 0;
+    left:0;
+    right:0;
+    z-index: -1;
+    border-radius: 0px 0px 50px 50px;
+    content: '';
+    background-image: url('/images/content/banner_alt-bg.png');
+    background-size: cover;
+  }
+  &__inner{
+    display: flex;
+    flex-direction: column;
+  }
+  &__info{
+    display: flex !important;
+    flex-direction: column;
+    position: relative;
+    gap:32px;
+  }
+  &__details{
+    display: flex;
+    gap: 24px;
+  }
+  &__desc{
+    max-width: 900px;
+    margin-top: 30px;
+    width: 100%;
+  }
+  &__arrows{
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    gap:40px;
+    bottom:30px;
+    font-size: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    top:0;
+    right:20px;
+  }
+  &__img{
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50px;
+    max-height: 413px;
+  }
+  @keyframes fadeInMoveBottom {
+    0%{
+      opacity: 100%;
+      transform: translateY(0px);
+    }
+    50%{
+      opacity: 0%;
+      transform: translateY((-20px));
+    }
+    51%{
+      opacity: 0%;
+      transform: translateY((20px));
+    }
+    100%{
+      opacity: 100%;
+      transform: translateY(0);
+    }
+  }
+  &__info-slides{
+    .slick-list{
+      overflow: visible !important;
+    }
+    .slick-active{
+      animation: fadeInMoveBottom 1s;
+      // animation-delay: 0.5s;
+    }
+  }
+  &__images{
+    .slick-active{
+      animation-duration: .6s;
+    }
+  }
+}
+// end banner
+@media (max-width:1430px) {
+  .banner{
+    &__desc{
+      max-width: 500px;
+    }
+  }
+}
+@media (max-width:1080px) {
+  .banner{
+    &__details{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+@media (max-width:800px) {
+  .banner{
+    padding-top: 50px;
+    padding-bottom: 40px;
+    &__arrows{
+      bottom: 20px;
+    }
+    &__img{
+      min-height: 175px;
+    }
+  }
+}

@@ -1,0 +1,142 @@
+// start about
+.about{
+    .container{
+        max-width: 1920px;
+    }
+    &__inner{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        gap:48px;
+    }
+    &__head{
+        min-width: 750px;
+    }
+    &__desc{
+        max-width: 705px;
+        width: 100%;
+    }
+    &__collage{
+        max-width: 950px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        &-photo{
+            position: absolute;
+            object-fit: cover;
+            transform: scaleY(0);
+            border-radius: 30px;
+            &_first{
+                width: 42%;
+                bottom:15%;
+                right:15%;
+                &.about__collage-photo_animate{
+                    animation: heightUpRight .4s forwards;
+                }
+            }
+            &_second{
+                width: 56.1%;
+                left:6%;
+                &.about__collage-photo_animate{
+                    animation: heightUpLeft .4s forwards;
+                }
+            }
+            &_third{
+                width: 49.6%;
+                top:15%;
+                right:20%;
+                &.about__collage-photo_animate{
+                    animation: heightUpRight .4s forwards;
+                }
+            }
+            &_animate{
+                transform-origin: center bottom;
+                animation: heightUp .4s forwards;
+            }
+        }
+        @keyframes heightUpRight {
+            0%{
+                transform: rotate(10deg) scaleY(0);
+            }
+            100%{
+                transform: rotate(10deg) scaleY(1);
+            }
+        }
+        @keyframes heightUpLeft {
+            0%{
+                transform: rotate(-10deg) scaleY(0);
+            }
+            100%{
+                transform: rotate(-10deg) scaleY(1);
+            }
+        }
+        @keyframes heightUp {
+            0%{
+                transform: scaleY(0);
+            }
+            100%{
+                transform:  scaleY(1);
+            }
+        }
+    }
+}
+// end about
+@media (max-width:1760px) {
+    .about{
+        margin-bottom: 100px;
+    }
+}
+@media (max-width:1530px) {
+    .about{
+        &__head{
+            min-width: 530px;
+        }
+    }
+}
+@media (max-width:1080px) {
+    .about{
+        padding-top: 100px;
+        margin-bottom: 0;
+        &__inner{
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+        &__desc{
+            max-width: unset;
+        }
+        &__collage{
+            z-index: -1;
+            max-width: 800px;
+            width: 100%;
+            margin-top: -100px;
+        }
+    }
+}
+@media (max-width:800px) {
+    .about{
+        &__text{
+            gap:30px;
+        }
+    }
+}
+@media (max-width:600px) {
+    .about{
+        &__head{
+            display: flex;
+            justify-content: space-between;
+            min-width: unset;
+        }
+        &__collage{
+            margin-top: -70px;
+        }
+        .head__img{
+            margin-left: 0;
+        }
+    }
+}

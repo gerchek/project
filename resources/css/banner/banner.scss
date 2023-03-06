@@ -1,0 +1,145 @@
+// start banner
+.banner{
+    position: relative;
+    max-width: 1920px;
+    margin:0 auto;
+    padding-top:123px;
+    padding-bottom: 100px;
+    &::before{
+        position: absolute;
+        top:-181px;
+        bottom: 0;
+        left:0;
+        right:0;
+        z-index: -1;
+        border-radius: 0px 0px 50px 50px;
+        content: '';
+        background-image: url('/images/content/top-banner-bg.png');
+        background-size: 100% 100%;
+    }
+    &__title{
+        display: flex;
+        align-items: center;
+
+    }
+    &__title-text{
+        word-break: break-all;
+    }
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        gap:32px;
+    }
+    &__info{
+        display: flex !important;
+        flex-direction: column;
+        position: relative;
+        gap:32px;
+    }
+    &__details{
+        display: flex;
+        align-items: flex-end;
+        gap: 24px;
+    }
+    &__desc{
+        max-width: 900px;
+        width: 100%;
+    }
+    &__arrows{
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        gap:40px;
+        bottom:30px;
+        font-size: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        top:0;
+        right:20px;
+    }
+    &__img{
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50px;
+        max-height: 500px;
+    }
+    @keyframes fadeInMoveBottom {
+        0%{
+            opacity: 100%;
+            transform: translateY(0px);
+        }
+        50%{
+            opacity: 0%;
+            transform: translateY((-20px));
+        }
+        51%{
+            opacity: 0%;
+            transform: translateY((20px));
+        }
+        100%{
+            opacity: 100%;
+            transform: translateY(0);
+        }
+    }
+    &__info-slides{
+        .slick-list{
+            overflow: visible !important;
+        }
+        .slick-active{
+            animation: fadeInMoveBottom 1s;
+            // animation-delay: 0.5s;
+        }
+    }
+    &__images{
+        .slick-active{
+            animation-duration: .6s;
+        }
+    }
+    // 404/500 page
+
+    &__img-wrapper{
+        position: relative;
+    }
+    &__error-img{
+        width: 100%;
+        max-width: 885px;
+        height: auto;
+        object-fit: cover;
+    }
+    &__error-sticker{
+        position: absolute;
+
+    }
+}
+// end banner
+@media (max-width:1430px) {
+    .banner{
+        &__desc{
+            max-width: 500px;
+        }
+    }
+}
+@media (max-width:1080px) {
+    .banner{
+        &__details{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}
+@media (max-width:800px) {
+    .banner{
+        padding-top: 50px;
+        padding-bottom: 40px;
+        &__arrows{
+            bottom: 20px;
+        }
+        &__img{
+            border-radius: 20px;
+            min-height: 175px;
+        }
+        &::before{
+            border-radius: 0px 0px 20px 20px;
+        }
+    }
+}

@@ -1,0 +1,113 @@
+@import 'vars';
+@import 'reset';
+@import 'global';
+@import 'fonts';
+@import 'libs';
+
+@import './header/header.scss';
+@import './banner/banner.scss';
+@import './about/about.scss';
+@import './modal/modal.scss';
+
+// start directions
+.directions{
+  margin-bottom: 250px;
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    gap: 110px;
+  }
+  &__items{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+  }
+  &__item{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #F3F3F3;
+    border-radius: 50px;
+    min-height: 325px;
+    padding:39px 35px 39px 31px;
+    font-size: 18px;
+    overflow: hidden;
+    @media screen and (max-width:720px) {
+      border-radius: 20px;
+    }
+    &::before{
+      position: absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      top:0;
+      border-radius: inherit;
+      content: '';
+      display: block;
+      background: url(/images/content/directions-bg.png);
+      background-position: center;
+      background-size: cover;
+      transition: .5s all ease-in-out;
+      opacity: 0;
+      z-index: -1;
+    }
+    &::after{
+      position: absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      height: 30px;
+      background-image: url(/images/content/contacts-bg.png);
+      background-repeat: repeat;
+      content: '';
+      opacity: .8;
+      filter: invert(1) brightness(1.5);
+      transition: .3s all ease-in;
+    }
+    &:hover{
+      color:$text;
+      &::before{
+        opacity: 1;
+      }
+      &::after{
+        opacity: 0;
+      }
+      .directions__link{
+        opacity: 1;
+      }
+      .directions__icon{
+        filter: invert(100%) sepia(79%) saturate(455%) hue-rotate(181deg) brightness(100%) contrast(100%);
+      }
+    }
+  }
+  &__item-nav{
+    padding-left: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__icon{
+    height:84px;
+    display:block;
+    transition: all ease-in-out .5s;
+    filter: invert(47%) sepia(79%) saturate(455%) hue-rotate(181deg) brightness(94%) contrast(90%);
+  }
+  &__link{
+    opacity: 0;
+    transition: .5s all ease-in-out;
+  }
+  &__title{
+    margin-bottom: 14px;
+  }
+  &__desc{
+    max-width: 349px;
+  }
+}
+// end directions
+
+@import './events/events.scss';
+@import './contact-form/contact-form.scss';
+@import './footer/footer.scss';
+@import './special.scss';
+@import 'media';

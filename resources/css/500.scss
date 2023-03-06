@@ -1,0 +1,35 @@
+@import 'vars';
+@import 'reset';
+@import 'global';
+@import 'fonts';
+@import 'libs';
+
+@import './header/header.scss';
+@import './banner/banner.scss';
+@import './modal/modal.scss';
+
+.banner{
+  margin-bottom: 100px;
+  &__inner{
+    align-items: center;
+    padding-right: 20px;
+  }
+  &__error-sticker{
+    width: 37%;
+    position: absolute;
+    height: 58%;
+    right: -9%;
+    top: -8%;
+  }
+  &__error-text{
+    text-align: center;
+  }
+}
+@media (max-width:800px) {
+  .banner{
+    margin-bottom: 50px;
+  }
+}
+@import './footer/footer.scss';
+@import './special.scss';
+@import 'media';

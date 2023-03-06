@@ -1,0 +1,179 @@
+@media(max-width: 1760px){
+
+  .directions{
+    margin-bottom: 100px;
+    &__items{
+      justify-content: center;
+    }
+  }
+
+}
+@media (max-width:1530px){
+  h1{
+    font-size: 64px;
+    &+.head__img>svg{
+      max-height: 50px;
+    }
+  }
+  h2{
+    font-size: 28px;
+  }
+  h3{
+    font-size: 20px;
+  }
+  html,body{
+    font-size: 18px;
+  }
+}
+
+@media (max-width:1080px) {
+  .directions{
+    .head__img{
+      display: none;
+    }
+    &__item{
+      width: 45vw;
+    }
+  }
+}
+@media (max-width:870px) {
+  .filter__input{
+    left:0;
+    right: unset;
+  }
+  .datepicker-wrapper{
+    left:0;
+    right: unset;
+  }
+}
+@media (max-width:800px) {
+  .circle{
+    display: none;
+  }
+  .logo{
+    &__img{
+      width: 65px;
+      height: 48px;
+    }
+    &__text{
+      width: 91px;
+      height: 37px;
+    }
+  }
+  h1{
+    font-size: 40px;
+    &+.head__img>svg{
+      max-height: 34px;
+    }
+  }
+  h2{
+    font-size: 24px;
+  }
+  h3{
+    font-size: 18px;
+  }
+  html,body{
+    font-size: 16px;
+  }
+  .btn{
+    font-size: 18px;
+    padding: 14px 35px;
+  }
+  .slick-arrow{
+    width: 23px;
+    height: 13px;
+    background-size: cover;
+    .arrow__circle{
+      width: 46px;
+      height: 46px;
+    }
+  }
+  .directions{
+    &__inner{
+      gap:30px;
+    }
+    &__item{
+      width: 95vw;
+    }
+  }
+  .contact-form{
+    &__input{
+      padding: 13px 22px;
+    }
+    &__area{
+      border-radius: 20px;
+    }
+  }
+  .accordion-header{
+    font-size: 32px;
+    &_active::before{
+      transform: rotate(0deg);
+    }
+  }
+  .filter{
+    &__label{
+      font-size: 16px;
+    }
+  }
+  .datepicker{
+    .day{
+      border-radius: 10px;
+    }
+    .range{
+      border-radius: 0;
+    }
+    .range-start{
+      border-radius: 10px 0 0 10px;
+    }
+    .range-end{
+      border-radius: 0 10px 10px 0;
+    }
+    .range-end.range-start{
+      border-radius: 10px;
+    }
+  }
+  .pagination{
+    padding:21.5px 16.5px;
+    gap:15px;
+    margin-bottom: 100px;
+    &__pages{
+      font-size: 14px;
+      gap:11px;
+    }
+  }
+  .fz150{
+    .pagination{
+      padding:16px 33px;
+      &__pages{
+        font-size: 150%;
+      }
+    }
+  }
+  .fz120{
+    .pagination{
+      padding:16px 33px;
+      &__pages{
+        font-size: 120%;
+      }
+    }
+  }
+}
+@media (max-width:600px){
+  .directions{
+    &__item{
+      min-height: 250px;
+      padding-top: 25px;
+    }
+    &__item-nav{
+      margin-bottom: 25px;
+    }
+    &__icon{
+      height: 72px;
+    }
+  }
+  .contact-form{
+    &__area{
+      min-height: 140px;
+    }
+  }
+}

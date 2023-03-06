@@ -1,0 +1,6 @@
+*
+!custom_admin.css
+!.gitignore
+!/admin/
+!/admin/**/
+!/**/mass-deletion.css

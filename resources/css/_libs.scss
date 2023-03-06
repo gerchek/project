@@ -1,0 +1,162 @@
+@import 'slick-carousel/slick/slick.scss';
+@import '~malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css';
+@import 'vanillajs-datepicker/sass/datepicker.scss';
+@import 'awesome-notifications/dist/style.css';
+@import '~select2/dist/css/select2.min.css';
+.mCS-my-theme.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    background-color: black;
+    border-radius: 100px;
+    width: 10px;
+}
+
+.mCS-my-theme.mCSB_scrollTools .mCSB_draggerRail{
+    background-color: transparent;
+}
+.mCSB_inside>.mCSB_container{
+    margin-right: 0;
+}
+.datepicker{
+    &-wrapper{
+        position: absolute;
+        top: calc(100% - 20px);
+        right: 0;
+    }
+    color:$text;
+    font-family: 'Montserrat';
+    border-radius: 20px;
+    &-view{
+        padding: 0px 22px 30px 22px;
+        .days-of-week{
+            font-family: 'Raleway';
+            padding-bottom: 10px;
+            display: grid;
+            grid-template-columns: repeat(7,1fr);
+            .dow{
+                height: 100%;
+                font-size: 18px;
+                line-height: 1;
+                width: 28px;
+            }
+        }
+    }
+    &-grid{
+        width: 249px;
+        row-gap: 4px;
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
+    }
+    &-picker{
+        background: #f3f3f3;
+        font-size: 18px;
+        font-weight: 300;
+        border-radius: inherit;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        span{
+            cursor: $default;
+        }
+    }
+    .day{
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        &:nth-last-child(-n+7){
+            display: none;
+        }
+    }
+    &-cell.focused:not(.selected){
+        font-weight: 700;
+        background: unset;
+    }
+    &-cell:not(.disabled):hover{
+        cursor: $pointer;
+    }
+    &-cell.selected{
+        background-color: rgba($text,1);
+        color:#fff;
+        font-weight: 300;
+        &:hover{
+            background-color: rgba($text,1);
+            color:#fff;
+        }
+    }
+    &-footer{
+        border-radius: 0px 0px 20px 20px;
+        .datepicker-controls{
+        }
+    }
+}
+.datepicker-header{
+    .datepicker-controls{
+        display: flex;
+        align-items: center;
+        .button{
+            cursor: $pointer;
+            font-weight: 400;
+            font-family: 'Montserrat';
+            padding: 0;
+            line-height: 1;
+        }
+        .view-switch{
+            font-size: 18px;
+            padding:20px 0;
+            height: auto;
+        }
+        .prev-btn,.next-btn{
+            content: url(/images/icons/arrow.svg);
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+            padding:20px 10px 20px 0px;
+        }
+        .prev-btn{
+            margin-top: 5px;
+            transform: rotate(180deg);
+        }
+    }
+}
+ymaps[class*=ground-pane]{
+    filter:grayscale(1);
+}
+ymaps[class*=controls-pane]{
+    display: none;
+}
+.select2{
+    transition: all ease-in .3s;
+    &-container{
+        max-width: 650px;
+        &--default{
+            .select2-selection--single{
+                height: 83px;
+                border-radius: 500px;
+                display: flex;
+                align-items: center;
+                cursor: $pointer;
+                font-size: 24px;
+                color:#2b2b2b;
+                .select2-selection__rendered{
+                    padding:15px 40px;
+                }
+                .select2-selection__arrow{
+                    display: none;
+                }
+            }
+        }
+    }
+    &-dropdown{
+        border-radius: 0 0 40px 40px;
+    }
+    &-results{
+        overflow: hidden;
+        &__option{
+            padding: 15px 40px;
+            cursor: $pointer;
+        }
+    }
+}
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple{
+    border-radius: 40px 40px 0 0;
+}

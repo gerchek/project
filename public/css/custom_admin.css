@@ -1,0 +1,11 @@
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.copy-me {
+    cursor: pointer;
+}
+
+.copy-me:hover {
+    background: #fff;
+}

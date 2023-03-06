@@ -1,0 +1,338 @@
+// start footer
+.footer{
+  &__inner{
+    max-width: 1720px;
+    margin: 0 auto;
+    font-size: 16px;
+    border-radius: 50px;
+    background: url('/images/content/footer-bg.png');
+    color:#fff;
+    background-size: 100% 100%;
+    display: grid;
+    grid-template: auto auto auto / 353px 1015px 353px;
+  }
+  &__inner>*{
+    border:1px solid #fff;
+  }
+  &__logo{
+    display: flex;
+    justify-content: center;
+    padding:49px 0 36px;
+    padding-right: 20px;
+    border: none;
+  }
+  &__logo-text{
+    width: 200px;
+    height: 81px;
+    object-fit: cover;
+  }
+  &__links{
+    display: flex;
+    gap:40px;
+    border-bottom: none;
+    padding-top:62px;
+    padding:62px 56px 50px;
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  &__link-list{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    max-width: 266px;
+    width: 100%;
+    &_with-headers{
+      padding-left: 50px;
+    }
+  }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    max-width: 250px;
+    width: 100%;
+  }
+  &__contacts{
+    padding:31px 10px 31px 66px;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    border:none;
+    border-top: 1px solid #fff;
+  }
+  &__contact{
+    max-width: 200px;
+  }
+  &__socials{
+    display: flex;
+    gap:10px;
+    min-height: 108px;
+    justify-content: center;
+    align-items: center;
+    border:none;
+    border-top:1px solid #fff;
+  }
+  .social-icon{
+    width: 49px;
+    height: 50px;
+    object-fit: cover;
+  }
+  &__feedback{
+    grid-column: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border: none;
+    padding: 62px 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap:17px;
+  }
+  &__desc{
+    display: block;
+    max-width: 230px;
+    margin-bottom: 13px;
+  }
+  &__license{
+    display: flex;
+    padding: 0 58px;
+    gap:20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__webalt-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:none;
+    border-top: 1px solid #fff;
+  }
+  &__webalt-link:hover{
+    cursor: $pointer;
+  }
+}
+// end footer
+
+
+.form__title{
+  max-width:600px;
+  text-transform: unset;
+  padding-left: 40px;
+}
+.form__head{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  margin-bottom: 55px;
+}
+.form__container{
+  position: relative;
+  padding: 75px 173px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::before{
+    position: absolute;
+    display: block;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    content:'';
+    background-image: url(/images/content/form-bg.png);
+    z-index: -1;
+    background-color: transparent;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width:1760px) {
+  .footer{
+    &__inner{
+      grid-template: auto auto auto / 20% 60% 20%;
+    }
+  }
+}
+@media (max-width:1530px) {
+  .footer{
+    &__links{
+      padding-left:40px;
+    }
+    &__link-list{
+      max-width: 220px;
+    }
+    &__link-list_with-headers{
+      padding-left: 15px;
+    }
+  }
+}
+@media (max-width:1430px) {
+  .footer{
+    &__contacts{
+      padding-left: 30px;
+    }
+  }
+}
+@media (max-width:1230px) {
+  .footer{
+    overflow: hidden;
+    &__logo{
+      padding: 39px 10px;
+    }
+    &__links{
+      padding-right: 30px;
+      gap:25px;
+    }
+    &__feedback{
+      padding: 62px 10px;
+    }
+    &__contactBtn{
+      padding: 20px 50px;
+    }
+  }
+}
+@media (max-width:1150px) {
+  .footer{
+    &__links{
+      padding:62px 10px 50px;
+      gap:15px;
+    }
+    &__inner{
+      grid-template: auto auto auto / 20% 57% 23%;
+    }
+    &__logo-text{
+      max-width:195px;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    &__contacts{
+      padding-left: 15px;
+    }
+  }
+}
+@media (max-width:1050px) {
+  .footer{
+    &__inner{
+      grid-template: auto auto auto auto auto / repeat(3,1fr);
+      border-radius: 20px;
+    }
+    &__logo{
+      grid-column: 1/4;
+      grid-row: 1;
+      justify-content: flex-start;
+      border: none;
+      padding-left: 20px;
+    }
+    &__links{
+      grid-row: 2;
+      grid-column: 1/4;
+      flex-wrap: wrap;
+      justify-content: center;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid #fff;
+    }
+    &__heading{
+      white-space: unset;
+    }
+    &__link-list{
+      max-width: 180px;
+    }
+    &__link-list_with-headers{
+      flex-direction: row;
+      flex-wrap: wrap;
+      max-width: 500px;
+      padding-left: 0;
+    }
+    &__contacts{
+      grid-row:3;
+      grid-column:1;
+      border: none;
+    }
+    &__contact{
+      max-width: unset;
+    }
+    &__socials{
+      border: none;
+      min-height: unset;
+      grid-row:3;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      padding:10px;
+      grid-column:3;
+    }
+    &__license{
+      grid-row: 6;
+      grid-column: 1/4;
+      padding:15px 10px;
+      border-left: none;
+      border-right: none;
+    }
+    &__webalt-wrapper{
+      grid-row: 7;
+      grid-column: 1/4;
+      padding:15px 10px;
+      border:none;
+    }
+    &__feedback{
+      grid-row: 3;
+      grid-column: 2;
+      padding: 25px 10px;
+      border: none;
+    }
+  }
+}
+@media (max-width:600px) {
+  .footer{
+    &__links{
+      padding:40px 10px;
+    }
+    &__feedback{
+      align-items: flex-start;
+      grid-row:4;
+      grid-column:1/3;
+    }
+    &__contacts{
+      grid-row: 3;
+      grid-column: 1/4;
+    }
+    &__socials{
+      grid-row: 4;
+      grid-column: 3;
+    }
+    &__desc{
+      margin-bottom: 7px;
+    }
+    &__license{
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      padding:40px 10px;
+    }
+  }
+}
+@media (max-width:399px) {
+  .footer{
+    &__logo{
+      padding-left: 20px;
+    }
+    &__links{
+      justify-content: flex-start;
+    }
+    &__link-list{
+      padding-left: 10px;
+      max-width: 170px;
+    }
+    &__link-list_with-headers{
+      display: grid;
+      grid-template-columns: auto auto;
+      max-width: 500px;
+    }
+    &__contacts,&__feedback,&__license{
+      padding-left: 20px;
+    }
+  }
+}
